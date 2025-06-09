@@ -14,6 +14,13 @@ Template for a function on a (listof X):
     else:
         return combine...(f_on_X lst[0])...f_of_listof_X(lst[1:])... 
 
+  def test_f_of_listof_X():
+    Signature: -> None
+    Purpose: Test f_of_listof_X function
+    Design Idea: 
+
+    assert f_of_listof_X([L ...]) == ..., "Test case 0 failed"
+
 Alternative template for a function on a (listof X):
 
   def f_of_listof_X(lst ...):

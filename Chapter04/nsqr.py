@@ -42,11 +42,11 @@ def test_addktimes():
     Purpose: Test add_ktimes
     Design idea: Test the function with 0 and nonzero natnums for k and differnent natnums for n
     """
-    assert addktimes(0,0) == 0, "Test 0 failed"
-    assert addktimes(0,20) == 0, "Test 1 failed"
-    assert addktimes(2,6) == 12, "Test 2 failed"
-    assert addktimes(3,3) == 9, "Test 3 failed"
-    assert addktimes(7,4) == 28, "Test 4 failed"
+    assert addktimes(0,0) == 0, "addktimes: Test 0 failed"
+    assert addktimes(0,20) == 0, "addktimes: Test 1 failed"
+    assert addktimes(2,6) == 12, "addktimes: Test 2 failed"
+    assert addktimes(3,3) == 9, "addktimes: Test 3 failed"
+    assert addktimes(7,4) == 28, "addktimes: Test 4 failed"
 
 test_addktimes()
 

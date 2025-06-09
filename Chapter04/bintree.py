@@ -89,8 +89,8 @@ def nodeContains(x, n):
 def bintreeContains(x, bt):
     """
     Signature: X bintreex -> bool
-    Purpose: returns True if bt contains x, False otherwise.
-    Design Idea: Return True if bt is not None and either x is equal to the value of bt or x is in one of the subtrees.
+    Purpose: Determine if given bintreeX contains given X.
+    Design Idea: Test that bt != None and given bintreeX's node contains given X.
     """
     return bt != None and nodeContains(x, bt)
 
