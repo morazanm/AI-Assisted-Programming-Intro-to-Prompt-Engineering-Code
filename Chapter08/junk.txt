@@ -1,0 +1,10 @@
+x = 20
+
+def times (q , y , z ):
+ """
+ Signature : number number number -> number
+ Purpose : Multiply the 3 given numbers
+ """
+ return q * x * y * z
+
+print(times(2, 3, 4))
