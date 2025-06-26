@@ -43,7 +43,7 @@ def gcd_helper(larger, smaller, rng):
     Purpose: Compute the greatest common divisor of a and b
     Design idea: Find largest common divisor of a and b in rng.
     """
-    if ((larger % rng[0]) == 0) and ((smaller % rng[0]) == 0):
+    if larger%rng[0]==0 and smaller%rng[0]==0:
         return rng[0]
     else:
         return gcd_helper(larger, smaller, rng[1:])
@@ -54,7 +54,7 @@ def gcd(a, b):
     Purpose: Compute the greatest common divisor of a and b
     Design idea: Find largest common divisor of a and b in [1..a].
     """
-    return gcd_helper(a, b, range(min(a,b), 0, -1))
+    return gcd_helper(max(a, b), min(a, b), range(min(a,b), 0, -1))
 
 def test_gcd():
     """
@@ -71,7 +71,7 @@ def test_gcd():
     assert gcd(23, 17) == 1, "Test case 3 failed"
     assert gcd(1, 8) == 1, "Test case 4 failed"
     assert gcd(1, 1) == 1, "Test case 5 failed"
-    #assert gcd(101135853, 45014640) == 177, "Test case 6 failed"
+    assert gcd(101135853, 45014640) == 177, "Test case 6 failed"
 
 test_gcd()
 

@@ -41,8 +41,8 @@ test_doubleLon()
 def sqrEvens(n):
     """
     Signature: natnum -> (listof natnum)
-    Purpose: Square the even numbers from 0 to n-1.
-    Design Idea: Use map to apply a square function to each even natnum in [0, n)
+    Purpose: Square the even numbers from 0 to n.
+    Design Idea: Use map to apply a square function to each even natnum in the interval
     """
     if n % 2 == 0:
         return list(map(lambda x: x ** 2, range(0,n+1,2)))
