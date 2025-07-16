@@ -5,8 +5,8 @@ x = 20
 def f(y):
     """
     Signature: number -> number
-    Purpose: Increment x by 10 and return its value
-    Design Idea: Mutate x by adding y to it
+    Purpose: Increment x by x and return its value
+    Design Idea: Mutate x to x + y
     """
     global x 
     x = x + y

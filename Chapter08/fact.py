@@ -2,7 +2,7 @@ def fact(n):
     """
     Signature natnum -> natnum
     Purpose: Compute n!
-    Design Idea:: Use structural recursion on a natnum
+    Design Idea: Use structural recursion on a natnum
     """
     if n == 0:
         return 1
