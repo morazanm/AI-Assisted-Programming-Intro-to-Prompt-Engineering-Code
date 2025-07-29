@@ -27,10 +27,10 @@ def test_goldenRect():
     assert goldenRect(1.6180339887 * 5, 1 * 5) == True, "Test case 1 failed"
     assert goldenRect(1.6180339887 * 11, 1 * 11) == True, "Test case 2 failed"
     assert goldenRect(1.6180339887 * 31, 1 * 31) == True, "Test case 3 failed"
-    assert goldenRect(8.09, 5) == True, "Test case 4 failed"
-    assert goldenRect(8.09 * 3, 5 * 3) == True, "Test case 5 failed"
-    assert goldenRect(8.09 * 44, 5 * 44) == True, "Test case 6 failed"
-    assert goldenRect(8.09 * 87, 5 * 87) == True, "Test case 7 failed"
+    assert goldenRect(8.0901699, 5) == True, "Test case 4 failed"
+    assert goldenRect(8.0901699 * 3, 5 * 3) == True, "Test case 5 failed"
+    assert goldenRect(8.0901699 * 44, 5 * 44) == True, "Test case 6 failed"
+    assert goldenRect(8.0901699 * 87, 5 * 87) == True, "Test case 7 failed"
     
     # Non-golden rectangles
     assert goldenRect(2, 1) == False, "Test case non-golden rectangle (2,1) failed"
