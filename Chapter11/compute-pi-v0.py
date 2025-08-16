@@ -115,7 +115,7 @@ def test_computePi():
       Include fail test strings "Test n failed" where n is the input to computePi.
     """
     Pi = decimal.Decimal('3.14159265358979323846264338327950288419716939937510')
-    tolerance = decimal.Decimal(10) ** -10
+    tolerance = decimal.Decimal(10) ** -15
     for n in range(1, 1000, 50):
         computed_pi = computePi(n)
         assert abs(computed_pi - Pi) < tolerance, f"Test {n} failed"
