@@ -143,10 +143,9 @@ def test_pdp_solver():
        solution = pdp_solver(pdp)
        if solution is not None:
            solution_pdp = generate_pdp(solution)
-           assert sorted(pdp) == sorted(solution_pdp), f"Test failed for length {length}: {pdp} != {solution_pdp}"
+           assert pdp == solution_pdp, f"Test failed for length {length}: {pdp} != {solution_pdp}"
        else:
            print(f"No solution found for PDP: {pdp}")
-   print("All tests passed!")
 
 test_pdp_solver()
 

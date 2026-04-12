@@ -52,6 +52,18 @@ def test_tri():
 
 test_tri()
 
+def test_tri2():
+    """
+    Signature: -> None
+    Purpose: Test tri
+    Design Idea: 
+      Loop through first 100 natural numbers
+      Test that for each (n*(n+1))//2 is returned by tri(n)
+    """
+    for n in range(101):
+        assert tri(n) == (n * (n + 1)) // 2, f"Test {n} failed"
+test_tri2()
+
 def tetra(n):
     """
     Signature: natnum -> natnum
@@ -76,3 +88,13 @@ def test_tetra():
 
 test_tetra()
 
+def test_tetra():
+    """
+    Signature: -> None
+    Purpose: Test tetra
+    Design Idea:
+        Loop through first 100 natural numbers
+        Test that for each (n*(n+1)*(n+2))//6 is returned by tetra(n)
+    """
+    for n in range(101):
+        assert tetra(n) == (n * (n + 1) * (n + 2)) // 6, f"Test {n} failed"

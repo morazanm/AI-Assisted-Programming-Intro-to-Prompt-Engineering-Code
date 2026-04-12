@@ -213,6 +213,25 @@ def test_unjumble():
     assert unjumble('ptnu') == ['punt'], "Test 2 failed"
     assert unjumble('tgilep') == ['piglet'], "Test 3 failed"
 
+def test_unjumble():
+    """
+    Signature:  -> None
+    Purpose: Test the unjumble function
+    Design Idea:
+      Use the template for a function on a low
+      Unjumble the following words: atc, rea, ptnu, tgilep
+      The expected sets of words are:
+        - atc should return {'act','cat'}
+        - rea should return {'aer', 'are', 'ear', 'era', 'rea'}
+        - ptnu should return {'punt'}
+        - tgilep should return {'piglet'}
+      For each convert the result returned by unjumble to a set and compare to the expected set
+    """
+    assert set(unjumble('atc')) == {'act', 'cat'}, "Test 0 failed"
+    assert set(unjumble('rea')) == {'aer', 'are', 'ear', 'era', 'rea'}, "Test 1 failed"
+    assert set(unjumble('ptnu')) == {'punt'}, "Test 2 failed"
+    assert set(unjumble('tgilep')) == {'piglet'}, "Test 3 failed"
+
 test_unjumble()    
 
 

@@ -18,24 +18,26 @@ def test_goldenRect():
     Design Idea: Test the following cases:
                  1. a golden rectangle with lengths 1.6180339887 and 1
                  2. several golden rectangles with lengths 1.6180339887*k and 1*k, where k=5,11,31
-                 3. a golden rectangle with lengths 8.0901699 and 5, where k>0
+                 3. a golden rectangle with lengths 8.0901699 and 5
                  4. several golden rectangles with lengths 8.0901699*k and 5*k, where k=3,44,87
                  5. non-golden rectangles
                  Include fail test strings starting at 0
     """
-    assert goldenRect(1.6180339887, 1) == True, "Test case 0 failed"
-    assert goldenRect(1.6180339887 * 5, 1 * 5) == True, "Test case 1 failed"
-    assert goldenRect(1.6180339887 * 11, 1 * 11) == True, "Test case 2 failed"
-    assert goldenRect(1.6180339887 * 31, 1 * 31) == True, "Test case 3 failed"
-    assert goldenRect(8.0901699, 5) == True, "Test case 4 failed"
-    assert goldenRect(8.0901699 * 3, 5 * 3) == True, "Test case 5 failed"
-    assert goldenRect(8.0901699 * 44, 5 * 44) == True, "Test case 6 failed"
-    assert goldenRect(8.0901699 * 87, 5 * 87) == True, "Test case 7 failed"
-    
+    # Test golden rectangles with 1.6180339887 and 1
+    test_case = 0
+    for k in [1, 5, 11, 31]:
+        assert goldenRect(1.6180339887 * k, 1 * k) == True, f"Test case {test_case} failed"
+        test_case += 1
+
+    # Test golden rectangles with 8.0901699 and 5
+    for k in [1, 3, 44, 87]:
+        assert goldenRect(8.0901699 * k, 5 * k) == True, f"Test case {test_case} failed"
+        test_case += 1
+
     # Non-golden rectangles
-    assert goldenRect(2, 1) == False, "Test case non-golden rectangle (2,1) failed"
-    assert goldenRect(3, 2) == False, "Test case non-golden rectangle (3,2) failed"
-    assert goldenRect(4, 3) == False, "Test case non-golden rectangle (4,3) failed"
+    non_golden_cases = [(2, 1), (3, 2), (4, 3)]
+    for larger, smaller in non_golden_cases:
+        assert goldenRect(larger, smaller) == False, f"Test case non-golden rectangle ({larger},{smaller}) failed"
 
 
 
