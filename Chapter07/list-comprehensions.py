@@ -119,8 +119,7 @@ def test_funct(funct, inputs, outputs):
     testvals = inputs
     results = outputs
     for testval, result in zip(testvals, results):
-        msg = f"Test failed for input {testval}: \
-expected {result}, got {funct(testval)}"
+        msg = f"Test failed for input {testval}: expected {result}, got {funct(testval)}"
         assert funct(testval) == result, msg
 
 def test_add1Lon3():
