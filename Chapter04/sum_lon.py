@@ -21,6 +21,8 @@ Template for a function on a (listof X):
 
     assert f_of_listof_X([L ...]) == ..., "Test case 0 failed"
 
+test_f_of_listof_X()
+
 Alternative template for a function on a (listof X):
 
   def f_of_listof_X(lst ...):
